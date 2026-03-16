@@ -15,6 +15,20 @@
       "when": 1773271113583,
       "tag": "0001_nervous_daredevil",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1773696156258,
+      "tag": "0002_tiny_snowbird",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1773696955449,
+      "tag": "0003_bumpy_thanos",
+      "breakpoints": true
     }
   ]
 }
