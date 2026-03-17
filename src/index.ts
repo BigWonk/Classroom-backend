@@ -2,14 +2,17 @@ import express from "express";
 import subjectsRouter from "./routes/subject";
 import cors from "cors";
 import secuirtyMiddleware from "./middleware/security";
+import {toNodeHandler} from "better-auth/node"
+import { auth } from "./lib/auth";
 const app = express();
 const port = 8000;
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }))
+app.all('/api/auth/*splat', toNodeHandler(auth));
 
 app.use(express.json());
 
