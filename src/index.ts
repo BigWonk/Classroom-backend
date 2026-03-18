@@ -10,7 +10,8 @@ const app = express();
 const port = 8000;
 
 app.use(cors({
-    origin: true,
+    origin: [ "http://localhost:5173",
+    "https://classroom-frontend-bay.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
     
