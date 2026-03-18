@@ -11,7 +11,7 @@ const port = 8000;
 
 app.use(cors({
     origin: [ "http://localhost:5173",
-    "https://classroom-frontend-bay.vercel.app"],
+    "https://classroom-frontend-leunfsvhz-bigwonks-projects.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
     
