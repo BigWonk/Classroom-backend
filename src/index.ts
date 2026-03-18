@@ -2,8 +2,10 @@ import express from "express";
 import subjectRoutes from "./routes/subject.js";
 import cors from "cors";
 import secuirtyMiddleware from "./middleware/security.js";
+import usersRouter from "./routes/users.js"
 import {toNodeHandler} from "better-auth/node"
 import { auth } from "./lib/auth.js";
+import classesRouter from "./routes/classes.js"
 const app = express();
 const port = 8000;
 
@@ -23,6 +25,8 @@ res.send("Mazna brat");
 
 })
 app.use("/api/subjects",subjectRoutes )
+app.use("/api/users", usersRouter)
+app.use("/api/classes", classesRouter)
 
 
 
